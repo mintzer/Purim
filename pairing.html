@@ -1,10 +1,11 @@
 <!doctype html>
-<html>
+<html dir="rtl">
+<link rel="icon" href="assets/purim.png" type="image/icon type">
 
     <head>
 
         <meta charset="utf-8" />
-        <title>Secret Santa Pairing</title>
+        <title>!משלוחי מנות</title>
 
         <script src="vendors/Lodash-3.10.1.js"></script>
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
@@ -25,11 +26,11 @@
             }
 
             body {
-                background: url(./assets/snow.png), url(./assets/santa.png), url(./assets/snow.png), radial-gradient(#FB3B3B, #EF3D3D);
-                background-repeat: repeat, no-repeat, repeat, no-repeat;
-
+                background: url(./assets/purim_bg.jpg), url(./assets/snow.jpg), radial-gradient(#FB3B3B, #EF3D3D);
+                background-repeat: no-repeat, no-repeat, repeat, no-repeat;
+				background-size: cover;
                 animation-name: snow;
-                animation-duration: 5s;
+                animation-duration: 30s;
                 animation-iteration-count: infinite;
                 animation-timing-function: linear;
 
@@ -37,8 +38,8 @@
             }
 
             @keyframes snow {
-                from { background-position: 130px 40px, bottom right, 0 0, 0 0; }
-                to { background-position: 130px 640px, bottom right, 0 300px, 0 0; }
+                from { background-position: 0px 0px, bottom right, 0 0, 0 0; }
+                to { background-position: 0px 0px, bottom right, 0 300px, 0 0; }
             }
 
             .spirit-of-christmas {
@@ -72,15 +73,19 @@
                 padding: 20px;
 
                 background: repeating-linear-gradient(
-                    45deg,
-                    #5CC48A,
-                    #5CC48A 30px,
-                    #FFFFFF 30px,
-                    #FFFFFF 60px,
-                    #EF3D3D 60px,
-                    #EF3D3D 90px,
-                    #FFFFFF 90px,
-                    #FFFFFF 120px
+                    135deg,
+                    #A3C9FE,
+                    #A3C9FE 20px,
+					#FFFFFF 10px,
+                    #e82012 30px,
+                    #e82012 50px,
+					#FFFFFF 10px,
+                    #f275c8 60px,
+                    #f275c8 80px,
+					#FFFFFF 10px,
+                    #e82012 60px,
+                    #e82012 50px,
+					#FFFFFF 10px
                 );
 
                 box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
@@ -147,7 +152,7 @@
             <div class="wrapper">
                 <div class="content">
 
-                    <div class="title">Hi <span id="name"></span>! You've been paired with</div>
+                    <div class="title">היי <span id="name"></span>! את מביאה משלוח מנות ל: </div>
                     <script>document.getElementById('name').innerText = name</script>
 
                     <div class="pairing">
@@ -164,7 +169,7 @@
                         </script>
                     </div>
 
-                    <div class="title">Good luck!</div>
+                    <div class="title">פורים שמח!</div>
 
                     <script>
                         if (queryString.extra) {
@@ -174,10 +179,6 @@
 
                 </div>
             </div>
-
-            <a href="http://arcanis.github.io/secretsanta/" class="spirit-of-christmas">
-                Want to start your own Secret Santa with your friends? Click here to get started!
-            </a>
 
         </div>
 
